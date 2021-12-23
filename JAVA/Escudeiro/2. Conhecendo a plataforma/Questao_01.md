@@ -115,7 +115,7 @@
               System.out.println("Total: " + total);
               System.out.println("Total1: " + total1);
               System.out.println("Total2: " + total2);
-        } 
+          } 
       }
 
 - Conversão de uma String para o tipo primitivo:
