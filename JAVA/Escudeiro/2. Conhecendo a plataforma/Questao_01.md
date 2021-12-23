@@ -60,7 +60,7 @@
 - <b>Wrapper:</b> O valor default para atributos de referência (objetos) é <b>null.</b>
 
 #### Como consigo converter cada tipo primitivo em uma classe Wrapper e como consigo converter cada classe Wrapper em um tipo primitivo?
-
+````java
     public class Application {
         public static void main(String[] args) {
     
@@ -93,11 +93,12 @@
             primitivoByte = wrapperByte.byteValue();
         }   
     }
+````
 
 #### Um exemplo de utilização de cada tipo durante o desenvolvimento de software.
 
 - Exemplo de conversão ***Value() wrapper para tipo primitivo:
-
+````java
       public class Application {
           public static void main(String[] args) {
               //cria um objeto wrapper
@@ -117,14 +118,16 @@
               System.out.println("Total2: " + total2);
           } 
       }
+````
 
 - Conversão de uma String para o tipo primitivo:
-
+````java
       double soma = Double.parseDouble("685.65");
       System.out.println("Soma: "+ soma);
+````
 
 - Exemplo do método valueOf() com a classe String:
-
+````java
       Integer idade = new Integer(39);
       String idadeString = String.valueOf(idade);
       String velocidade = new String("568.55");
@@ -132,6 +135,7 @@
 
       System.out.println("Idade string: " + idadeString);
       System.out.println("Velocidade double: " + velocidadeDouble);
+````
 
 ---
 
@@ -142,3 +146,4 @@
 <li><a href="https://www.devmedia.com.br/classes-wrapper-explorando-as-classes-que-empacotam-os-tipos-primitivos/24136">DEVMEDIA</a></li>
 <li><a href="http://www.inf.ufes.br/~vitorsouza/archive/2020/wp-content/uploads/java-br-curso-basico-novo-slides04.pdf">UFES</a></li>
 <li><a href="http://www.mauda.com.br/?p=1177">MAUDA</a></li>
+
