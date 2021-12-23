@@ -98,43 +98,40 @@
 
 - Exemplo de conversão ***Value() wrapper para tipo primitivo:
 
+      public class Application {
+          public static void main(String[] args) {
+              //cria um objeto wrapper
+              Integer velocidade = new Integer(587);
+    
+              //converte a variável velocidade para tipo primitivo
+              double total = velocidade.doubleValue();
+              short total1 = velocidade.shortValue();
+              byte total2 = velocidade.byteValue();
 
-    public class Application {
-        public static void main(String[] args) {
-            //cria um objeto wrapper
-            Integer velocidade = new Integer(587);
-    
-            //converte a variável velocidade para tipo primitivo
-            double total = velocidade.doubleValue();
-            short total1 = velocidade.shortValue();
-            byte total2 = velocidade.byteValue();
-    
-            Float pi = new Float(3.14f);
-            int valorPi = pi.intValue();
-    
-            System.out.println("Valor de PI arredondado: " + valorPi);
-            System.out.println("Total: " + total);
-            System.out.println("Total1: " + total1);
-            System.out.println("Total2: " + total2);
+              Float pi = new Float(3.14f);
+              int valorPi = pi.intValue();
+
+              System.out.println("Valor de PI arredondado: " + valorPi);
+              System.out.println("Total: " + total);
+              System.out.println("Total1: " + total1);
+              System.out.println("Total2: " + total2);
         } 
-    }
+      }
 
 - Conversão de uma String para o tipo primitivo:
 
-
-    double soma = Double.parseDouble("685.65");
-    System.out.println("Soma: "+ soma);
+      double soma = Double.parseDouble("685.65");
+      System.out.println("Soma: "+ soma);
 
 - Exemplo do método valueOf() com a classe String:
 
+      Integer idade = new Integer(39);
+      String idadeString = String.valueOf(idade);
+      String velocidade = new String("568.55");
+      Double velocidadeDouble = Double.valueOf(velocidade);
 
-    Integer idade = new Integer(39);
-    String idadeString = String.valueOf(idade);
-    String velocidade = new String("568.55");
-    Double velocidadeDouble = Double.valueOf(velocidade);
-    
-    System.out.println("Idade string: " + idadeString);
-    System.out.println("Velocidade double: " + velocidadeDouble);
+      System.out.println("Idade string: " + idadeString);
+      System.out.println("Velocidade double: " + velocidadeDouble);
 
 ---
 
