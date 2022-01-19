@@ -8,7 +8,7 @@
   .
 
 ````java
-public class Declaracao {
+public class Declarar {
     public static void main(String[] args) {
         int[] ints;
         ints = new int[10];
