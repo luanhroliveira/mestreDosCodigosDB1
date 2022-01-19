@@ -73,7 +73,7 @@ public class ContinueBreak {
 - Para quebra de laços, temos duas palavras reservadas, sendo elas o break e o continue.
     - <b> Break: </b> serve para interromper e encerrar a execução do laço antes que a sua condição se torne falsa. Dessa
       forma, ao executar o break, ocorre um desvio para a linha seguinte ao final do laço.
-    - <b> Continue: </b> De maneira oposta ao break, o continue serve oara iniciar uma nova repetição onde todas as instruções tenham sido executadas.
+    - <b> Continue: </b> De maneira oposta ao break, o continue serve para iniciar uma nova repetição onde todas as instruções tenham sido executadas.
 
 ---
 
