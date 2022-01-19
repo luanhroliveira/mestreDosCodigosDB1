@@ -70,30 +70,27 @@ public class Percorrer {
 
         int[] ints = {10, 20, 30};
         for (int i : ints) {
-            System.out.printf("Elemento %d possui valor %d%n", i, ints[i]);
-            i++;
+            System.out.printf("Valor %d%n", i);
         }
 
         long[] longs = {20, 30, 40};
         for (long i : longs) {
-            System.out.printf("Elemento %d possui valor %d%n", i, longs[i]);
-            i++;
+            System.out.printf("Valor %d%n", i);
         }
 
         Integer[] integers = {30, 40, 50};
         for (Integer i : integers) {
-            System.out.printf("Elemento %d possui valor %d%n", i, integers[i]);
-            i++;
+            System.out.printf("Valor %d%n", i);
         }
 
         Long[] longsWrapper = {10L, 20L, 40L};
         for (Long i : longsWrapper) {
-            System.out.printf("Elemento %d possui valor %d%n", i, longsWrapper[i]);
-            i++;
+            System.out.printf("Valor %d%n", i);
         }
     }
 }
 ````
+
 ---
 
 ### Bibliografia:
