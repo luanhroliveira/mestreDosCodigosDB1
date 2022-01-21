@@ -119,6 +119,53 @@ Saída:
     [D, A, E, B, C]
     [A]
 
+### Vector:
+
+- O Vector tem como principal característica ser thread safe, isso significa que executará pilhas diferentes sendo
+  executados paralelamente uma mesma lista será usada.
+
+  É recomendado que se uma implementação thread-safe não for necessária, utiliza-se o ArrayList no lugar do Vector.
+
+  Um Vector tem o dobro do tamanho da lista, tornando mais custoso. Por exemplo, se têm um Vector de 10 elementos, seu
+  tamanho corresponderá a 20 elementos.
+
+Veja um exemplo de sua implementação:
+
+````java
+public class VectorClass {
+
+    public static void main(String args[]) {
+
+        Vector vector = new Vector();
+        vector.add(3);
+        vector.add(2);
+        vector.add(1);
+        vector.add(4);
+        vector.add(5);
+        vector.add(6);
+        vector.add(6);
+
+        Iterator iter1 = vector.iterator();
+        while (iter1.hasNext()) {
+            System.out.println(iter1.next());
+        }
+
+        System.out.println(vector.get(2));
+    }
+}
+````
+
+Saída:
+
+    3
+    2
+    1
+    4
+    5
+    6
+    6
+    1
+
 ---
 
 ### Bibliografias:
@@ -126,3 +173,5 @@ Saída:
 <li><a href="https://docs.oracle.com/javase/7/docs/api/java/util/PriorityQueue.html">ORACLE (PRIORITY QUEUE)</a></li>
 <li><a href="https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html"> ORACLE (LINKED LIST)</a></li>
 <li><a href="https://www.educative.io/blog/data-structures-linked-list-java-tutorial">EDUCATIVE</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html">ORACLE (VECTOR)</a></li>
+<li><a href="https://www.devmedia.com.br/diferenca-entre-arraylist-vector-e-linkedlist-em-java/29162">DEV MEDIA</a></li>
