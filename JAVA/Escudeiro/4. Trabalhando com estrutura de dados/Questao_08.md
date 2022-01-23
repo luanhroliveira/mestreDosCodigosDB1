@@ -303,6 +303,56 @@ O intuito é gaarantir a flexibilidade da aplicação, da forma implementada, co
 ser instanciado de maneiras distintas em pontos distintos da aplicação, dessa forma, eu tenho certeza dos métodos que o
 objeto tem.
 
+### Set:
+
+- Utilizamos a interface Set, quando não desejamos que o array contenha valores duplicados. Pois, é uma excelente opção
+  para quem deseja trabalhar com união, intersecção, diferença.
+
+  Veja um exemplo de sua implementação:
+
+````java
+public class SetClass {
+
+    public static void main(String args[]) {
+
+        // Criando um objeto da classe Set, declarando o objeto do tipo Integer
+        Set<Integer> a = new HashSet<Integer>();
+
+        // Adicionando todos os elementos à lista
+        a.addAll(Arrays.asList(new Integer[]{1, 3, 2, 4, 8, 9, 0}));
+
+        Set<Integer> b = new HashSet<Integer>();
+
+        b.addAll(Arrays.asList(new Integer[]{1, 3, 7, 5, 4, 0, 7, 5}));
+
+
+        // Para encontrar união
+        Set<Integer> union = new HashSet<Integer>(a);
+        union.addAll(b);
+        System.out.print("União dos dois Set: ");
+        System.out.println(union);
+
+        // Para encontrar a intersecção
+        Set<Integer> intersection = new HashSet<Integer>(a);
+        intersection.retainAll(b);
+        System.out.print("Intersecção dos dois Set: ");
+        System.out.println(intersection);
+
+        // Para encontrar a diferença simétrica
+        Set<Integer> difference = new HashSet<Integer>(a);
+        difference.removeAll(b);
+        System.out.print("Diferença dos dois Set: ");
+        System.out.println(difference);
+    }
+}
+````
+
+Saída:
+
+    União dos dois Set: [0, 1, 2, 3, 4, 5, 7, 8, 9]
+    Intersecção dos dois Set: [0, 1, 3, 4]
+    Diferença dos dois Set: [2, 8, 9]
+
 ---
 
 ### Bibliografias:
@@ -314,3 +364,4 @@ objeto tem.
 <li><a href="https://www.devmedia.com.br/diferenca-entre-arraylist-vector-e-linkedlist-em-java/29162">DEV MEDIA</a></li>
 <li><a href="https://www.w3schools.com/java/java_arraylist.asp">W3SCHOOLS</a></li>
 <li><a href="https://www.devmedia.com.br/explorando-a-classe-arraylist-no-java/24298">DEV MEDIA</a></li>
+<li><a href="http://www.linhadecodigo.com.br/artigo/3669/trabalhando-com-a-interface-set-no-java.aspx#:~:text=Considerada%20uma%20interface%20que%20faz,nenhum%20dado%20duplicado%20na%20cole%C3%A7%C3%A3o.">LINHA DE CÓDIGO</a></li>
