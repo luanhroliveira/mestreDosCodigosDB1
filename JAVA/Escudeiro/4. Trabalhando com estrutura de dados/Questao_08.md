@@ -399,7 +399,7 @@ Saída:
 <li><a href="https://www.devmedia.com.br/explorando-a-classe-arraylist-no-java/24298">DEV MEDIA</a></li>
 <li><a href="http://www.linhadecodigo.com.br/artigo/3669/trabalhando-com-a-interface-set-no-java.aspx#:~:text=Considerada%20uma%20interface%20que%20faz,nenhum%20dado%20duplicado%20na%20cole%C3%A7%C3%A3o.">LINHA DE CÓDIGO</a></li>
 <li><a href="https://docs.oracle.com/javase/7/docs/api/java/util/HashSet.html">ORACLE (HASH SET)</a></li>
-<li><a href=""></a></li>
+<li><a href="https://www.w3schools.com/java/java_hashset.asp">W3SCHOOLS (HASH SET)</a></li>
 <li><a href=""></a></li>
 <li><a href=""></a></li>
 <li><a href=""></a></li>
