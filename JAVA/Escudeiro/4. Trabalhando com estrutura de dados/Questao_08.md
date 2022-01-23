@@ -212,6 +212,52 @@ Note que o algoritmo é muito semelhante ao do Vector, pois realmente só troque
 muito parecidas, tendo como diferença o fato do Vector ser thread-safe, e o ArrayList não. Dessa forma, se precisar
 utilizar uma lista que permite thread-safe, utilize Vector.
 
+### Queue:
+
+- A interface Queue é utilizada para conter elementos que estão prestes a serem processados na ordem FIFO (First In
+  First Out). De maneira geral, é uma lista ordenada de objetos com o seu uso limitado a inserir elementos no final, e
+  deletar elementos no início da lista, seguindo o princípio de FIFO. Em outras palavras, o primeiro que chega, será o
+  primeiro a ser atendido.
+
+  Veja um exemplo de implementação da Queue:
+
+````java
+public class QueueClass {
+
+    public static void main(String[] args) {
+        Queue<Integer> queue = new LinkedList<>();
+
+        // Adiciona elementos na fila
+        for (int i = 0; i < 5; i++) {
+            queue.add(i);
+        }
+
+        // Exibe o conteúdo da fila.
+        System.out.println("Elementos da fila: " + queue);
+
+        // Remover o primeiro da fila
+        System.out.println("Elemento removido: " + queue.remove());
+
+        // Exibe o conteúdo da fila.
+        System.out.println(queue);
+
+        // Visualizar o início da fila
+        System.out.println("Chefe da fila: " + queue.peek());
+
+        // Visualizar o tamanho da fila
+        System.out.println("Tamanho da fila: " + queue.size());
+    }
+}
+````
+
+Saída:
+
+    Elementos da fila: [0, 1, 2, 3, 4]
+    Elemento removido: 0
+    [1, 2, 3, 4]
+    Chefe da fila: 1
+    Tamanho da fila: 4
+
 ---
 
 ### Bibliografias:
