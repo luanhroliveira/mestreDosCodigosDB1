@@ -490,6 +490,86 @@ Saída:
 
 É importante ressaltar que todos os elementos de um SortedSet devem implementar a interface Comparable.
 
+### NavigableSet:
+
+- A interface NavigableSet estende a SortedSet, e também herda o comportamento de um SortedSet com a exceção de que
+  temos métodos de navegação disponíveis.
+
+  Um NavigableSet pode ser acessado e percorrido em ordem crescente e decrescente.
+
+````java
+public class NavigableSetClasse {
+
+    public static void main(String[] args) {
+
+        NavigableSet<Integer> ns = new TreeSet<>();
+
+        ns.add(0);
+        ns.add(1);
+        ns.add(2);
+        ns.add(3);
+        ns.add(4);
+        ns.add(5);
+        ns.add(6);
+
+        // Obtendo uma visão inversa do conjunto navegável
+        NavigableSet<Integer> reverseNs = ns.descendingSet();
+
+        // Imprime as visualizações normal e inversa
+        System.out.println("Ordem normal: " + ns);
+        System.out.println("Ordem inversa: " + reverseNs);
+
+        NavigableSet<Integer> threeOrMore = ns.tailSet(3, true);
+
+        System.out.println("3 or more:  " + threeOrMore);
+        System.out.println("lower(3): " + ns.lower(3));
+        System.out.println("floor(3): " + ns.floor(3));
+        System.out.println("higher(3): " + ns.higher(3));
+        System.out.println("ceiling(3): " + ns.ceiling(3));
+
+        System.out.println("pollFirst(): " + ns.pollFirst());
+        System.out.println("Navigable Set: " + ns);
+
+        System.out.println("pollLast(): " + ns.pollLast());
+        System.out.println("Navigable Set: " + ns);
+
+        System.out.println("pollFirst(): " + ns.pollFirst());
+        System.out.println("Navigable Set: " + ns);
+
+        System.out.println("pollFirst(): " + ns.pollFirst());
+        System.out.println("Navigable Set: " + ns);
+
+        System.out.println("pollFirst(): " + ns.pollFirst());
+        System.out.println("Navigable Set: " + ns);
+
+        System.out.println("pollFirst(): " + ns.pollFirst());
+        System.out.println("pollLast(): " + ns.pollLast());
+    }
+}
+````
+
+Saída:
+
+    Ordem normal: [0, 1, 2, 3, 4, 5, 6]
+    Ordem inversa: [6, 5, 4, 3, 2, 1, 0]
+    3 or more: [3, 4, 5, 6]
+    lower(3): 2
+    floor(3): 3
+    higher(3): 4
+    ceiling (3): 3
+    pollFirst(): 0
+    Navigable Set: [1, 2, 3, 4, 5, 6]
+    pollLast(): 6
+    Navigable Set: [1, 2, 3, 4, 5]
+    pollFirst(): 1
+    Navigable Set: [2, 3, 4, 5]
+    pollFirst(): 2
+    Navigable Set: [3, 4, 5]
+    pollFirst(): 3
+    Navigable Set: [4, 5]
+    pollFirst(): 4
+    pollLast(): 5
+
 ---
 
 ### Bibliografias:
@@ -506,4 +586,4 @@ Saída:
 <li><a href="https://www.w3schools.com/java/java_hashset.asp">W3SCHOOLS (HASH SET)</a></li>
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html">ORACLE (LINKED HASH SET)</a></li>
 <li><a href="https://www.devmedia.com.br/conjuntos-classificados-sortedset-em-java-gerando-jogos-para-mega-sena/26430">DEV MEDIA (SORTED SET)</a></li>
-<li><a href=""></a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/NavigableSet.html">ORACLE (NAVIGABLE SET)</a></li>
