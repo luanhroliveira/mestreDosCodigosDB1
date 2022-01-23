@@ -353,6 +353,39 @@ Saída:
     Intersecção dos dois Set: [0, 1, 3, 4]
     Diferença dos dois Set: [2, 8, 9]
 
+### HashSet:
+
+- O HashSet implementa a interface Set, e é o mais rápido dentre todos que implementam o Set, pois este, usa a HashTable
+  e os seus elementos não são ordenados. Muito indicado onde se é necessário ter maior performance, caso a ordenação
+  seja importante, o HashSet não é tão interessante.
+
+  Veja:
+
+````java
+public class HashSetClass {
+    
+    public static void main(String[] args) {
+
+        HashSet<Gato> gatoHashSet = new HashSet<Gato>();
+
+        gatoHashSet.add(new Gato(2));
+        gatoHashSet.add(new Gato(1));
+        gatoHashSet.add(new Gato(3));
+        gatoHashSet.add(new Gato(5));
+        gatoHashSet.add(new Gato(4));
+
+        Iterator<Gato> iterator = gatoHashSet.iterator();
+        
+        while (iterator.hasNext()) {
+            System.out.print(iterator.next() + " ");
+        }
+    }
+````
+
+Saída:
+
+    [5 3 2 1 4 ]
+
 ---
 
 ### Bibliografias:
@@ -365,3 +398,8 @@ Saída:
 <li><a href="https://www.w3schools.com/java/java_arraylist.asp">W3SCHOOLS</a></li>
 <li><a href="https://www.devmedia.com.br/explorando-a-classe-arraylist-no-java/24298">DEV MEDIA</a></li>
 <li><a href="http://www.linhadecodigo.com.br/artigo/3669/trabalhando-com-a-interface-set-no-java.aspx#:~:text=Considerada%20uma%20interface%20que%20faz,nenhum%20dado%20duplicado%20na%20cole%C3%A7%C3%A3o.">LINHA DE CÓDIGO</a></li>
+<li><a href="https://docs.oracle.com/javase/7/docs/api/java/util/HashSet.html">ORACLE (HASH SET)</a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
+<li><a href=""></a></li>
