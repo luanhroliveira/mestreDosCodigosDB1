@@ -612,6 +612,56 @@ Saída:
 
     [A, B, C]
 
+### Collection:
+
+- A interface Collection é absoluta na hierarquia de coleções, dela descendem todas as interfaces que foram descritas
+  neste documento, que formam a base das coleções genéricas de Java.
+
+  E com ela, podemos manipular os dados como já visto nas demais interfaces utilizando os métodos de adicionar, remover,
+  obter, entre outros.
+
+  Veja alguns exemplos:
+
+````java
+public class CollectionClass {
+
+    public static void main(String[] args) {
+
+        Collection<String> nomes = new ArrayList();
+
+        nomes.add("João");
+        nomes.add("Maria");
+        nomes.add("Eduardo");
+        nomes.add("Silvana");
+        nomes.add("Mário");
+
+        System.out.println("Lista de nomes: " + nomes);
+
+        nomes.remove("Mário");
+
+        System.out.println("Lista de nomes após remoção: " + nomes);
+
+        nomes.contains("Silvana");
+
+        System.out.println("Contém o nome Silvana? " + nomes);
+
+        for (String nome : nomes) {
+            System.out.println("Nome: " + nome);
+        }
+    }
+}
+````
+
+Saída:
+
+    Lista de nomes: [João, Maria, Eduardo, Silvana, Mário]
+    Lista de nomes após remoção: [João, Maria, Eduardo, Silvana]
+    Contém o nome Silvana? true
+    Nome: João
+    Nome: Maria
+    Nome: Eduardo
+    Nome: Mário
+
 ---
 
 ### Bibliografias:
@@ -631,3 +681,5 @@ Saída:
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/NavigableSet.html">ORACLE (NAVIGABLE SET)</a></li>
 <li><a href="https://www.devmedia.com.br/diferencas-entre-treeset-hashset-e-linkedhashset-em-java/29077">DEV MEDIA (TREE SET)</a></li>
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html">ORACLE (TREE SET)</a></li>
+<li><a href="https://www.devmedia.com.br/visao-geral-da-interface-collection-em-java/25822">DEV MEDIA (COLLECTION)</a></li>
+
