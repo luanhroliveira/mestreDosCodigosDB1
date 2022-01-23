@@ -570,6 +570,48 @@ Saída:
     pollFirst(): 4
     pollLast(): 5
 
+### TreeSet:
+
+- O TreeSet implementa a interface SortedSet e consequentemente a interface Set, herdando assim todos os métodos já
+  descritos.
+
+  A ordenação dos elementos é mantida por um conjunto usando sua ordenação natural, independentemente de um comparador
+  explícito ser fornecido ou não. Isso deve ser consistente com equals para implementar corretamente a interface Set.
+
+  Ele também pode ser ordenado por um Comparator fornecido no momento da criação do conjunto, dependendo de qual
+  construtor é usado.
+
+![TreeSet](https://github.com/luanhroliveira/assets/blob/main/mestreDosCodigosDB1/java/escudeiro/Set-TreeSet-SortedSet-In-Java-Collection.png "TreeSet")
+
+Como podemos ver na imagem acima, o NavigableSet estende a interface do Set. A interface do NavigableSet fornece a
+implementação para navegar pelo Set, como visto no tópico acima. A classe que implementa o NavigableSet fornece uma
+maneira de navegar por esta árvore.
+
+````java
+public class TreeSetClass {
+
+    public static void main(String[] args) {
+
+        Set<String> treeSet = new TreeSet<>();
+
+        // Adicionando elementos utilizando o método add().
+        treeSet.add("A");
+        treeSet.add("B");
+        treeSet.add("C");
+
+        // Duplicatas não serão inseridas
+        treeSet.add("C");
+
+        // Os elementos são armazenados na ordem de classificação natural padrão (ascendente)
+        System.out.println(treeSet);
+    }
+}
+````
+
+Saída:
+
+    [A, B, C]
+
 ---
 
 ### Bibliografias:
@@ -587,3 +629,5 @@ Saída:
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html">ORACLE (LINKED HASH SET)</a></li>
 <li><a href="https://www.devmedia.com.br/conjuntos-classificados-sortedset-em-java-gerando-jogos-para-mega-sena/26430">DEV MEDIA (SORTED SET)</a></li>
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/NavigableSet.html">ORACLE (NAVIGABLE SET)</a></li>
+<li><a href="https://www.devmedia.com.br/diferencas-entre-treeset-hashset-e-linkedhashset-em-java/29077">DEV MEDIA (TREE SET)</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html">ORACLE (TREE SET)</a></li>
