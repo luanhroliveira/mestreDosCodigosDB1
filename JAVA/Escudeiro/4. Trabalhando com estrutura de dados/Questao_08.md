@@ -662,6 +662,63 @@ Saída:
     Nome: Eduardo
     Nome: Mário
 
+### Iterator:
+
+- A interface Iterator, como já visto em diversas implementações efetuadas neste documento, serve para percorrer as
+  coleções.
+
+  É chamado de Iterator porque "iterar" é o termo técnico para looping.
+
+  Ao usar i Iterator, podemos executar operações de leitura e remoção. E é o único cursor disponível para toda a
+  estrutura de coleção.
+
+  Veja um exemplo da sua implementação:
+
+````java
+public class IteratorClass {
+
+    public static void main(String[] args) {
+
+        ArrayList<Integer> al = new ArrayList<Integer>();
+
+        // Incrementando lista
+        for (int i = 0; i < 10; i++)
+            al.add(i);
+
+        // Exibindo elementos da lista
+        System.out.println(al);
+
+        // no início itr(cursor) apontará para o índice logo antes do primeiro elemento em al.
+        Iterator itr = al.iterator();
+
+        // verificando o próximo elemento onde a condição é verdadeira
+        // até que haja um único elemento na lista usando o método hasnext().
+        while (itr.hasNext()) {
+            //  Movendo cursor para o próximo elemento.
+            int i = (Integer) itr.next();
+
+            // Obtendo elementos pares um por um
+            System.out.print(i + " ");
+
+            // Removendo elementos ímpares.
+            if (i % 2 != 0)
+                itr.remove();
+        }
+
+        System.out.println();
+
+        // Exibindo elementos dentro do objeto.
+        System.out.println(al);
+    }
+}
+````
+
+Saída:
+
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    0 1 2 3 4 5 6 7 8 9
+    [0, 2, 4, 6, 8]
+
 ---
 
 ### Bibliografias:
@@ -682,4 +739,5 @@ Saída:
 <li><a href="https://www.devmedia.com.br/diferencas-entre-treeset-hashset-e-linkedhashset-em-java/29077">DEV MEDIA (TREE SET)</a></li>
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html">ORACLE (TREE SET)</a></li>
 <li><a href="https://www.devmedia.com.br/visao-geral-da-interface-collection-em-java/25822">DEV MEDIA (COLLECTION)</a></li>
-
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html">ORACLE (ITERATOR)</a></li>
+<li><a href="https://www.w3schools.com/java/java_iterator.asp">W3SCHOOLS (ITERATOR)</a></li>
