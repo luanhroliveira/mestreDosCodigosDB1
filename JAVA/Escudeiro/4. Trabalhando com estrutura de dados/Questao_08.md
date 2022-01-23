@@ -356,14 +356,14 @@ Saída:
 ### HashSet:
 
 - O HashSet implementa a interface Set, e é o mais rápido dentre todos que implementam o Set, pois este, usa a HashTable
-  e os seus elementos não são ordenados. Muito indicado onde se é necessário ter maior performance, caso a ordenação
-  seja importante, o HashSet não é tão interessante.
+  e os seus elementos não são ordenados. Muito indicado onde se é necessário ter maior desempenho, caso a ordenação seja
+  importante, o HashSet não é tão interessante.
 
   Veja:
 
 ````java
 public class HashSetClass {
-    
+
     public static void main(String[] args) {
 
         HashSet<Gato> gatoHashSet = new HashSet<Gato>();
@@ -375,7 +375,7 @@ public class HashSetClass {
         gatoHashSet.add(new Gato(4));
 
         Iterator<Gato> iterator = gatoHashSet.iterator();
-        
+
         while (iterator.hasNext()) {
             System.out.print(iterator.next() + " ");
         }
@@ -386,20 +386,75 @@ Saída:
 
     [5 3 2 1 4 ]
 
+### LinkedHashSet:
+
+- A classe LinkedHashSet estende de HashSet, trazendo consigo parte do desempenho e a ordenação, ausente no HashSet.
+  Ideal para quem busca um array performatico e ordenado.
+
+  Ao percorrer o LinkedHashSet com um iterator, os elementos serão retornados na ordem em que foram inseridos.
+
+  Veja sua implementação:
+
+````java
+public class LinkedHashSetClass {
+
+    public static void main(String[] args) {
+
+        LinkedHashSet<String> linkedHashSet = new LinkedHashSet<String>();
+
+        // Adicionando elementos no LinkedHashSet utilizando o método add().
+        linkedHashSet.add("A");
+        linkedHashSet.add("B");
+        linkedHashSet.add("C");
+        linkedHashSet.add("D");
+
+        // Nota: Isso não adicionará um novo elemento, pois o elemento 'A' já existe.
+        linkedHashSet.add("A");
+        linkedHashSet.add("E");
+
+        // Obtendo o tamanho com o método size().
+        System.out.println("Tamanho do LinkedHashSet: " + linkedHashSet.size());
+
+        System.out.println("Original LinkedHashSet:" + linkedHashSet);
+
+        // Removendo objeto existente 'D', utilizando o método remove(). 
+        System.out.println("Removendo 'D' do LinkedHashSet: " + linkedHashSet.remove("D"));
+
+        // Removendo um objeto inexistente no LinkedHashSet
+        System.out.println("Tentando remover 'Z' que não existe no LinkedHashSet: " + linkedHashSet.remove("Z"));
+
+        // Verificando se o elemento 'A' existe no array.
+        System.out.println("Verificando se 'A' está contido no array: " + linkedHashSet.contains("A"));
+
+        // Agora, exibindo o array atualizado.
+        System.out.println("LinkedHashSet atualizado: " + linkedHashSet);
+    }
+}
+````
+
+Saída:
+
+    Tamanho do LinkedHashSet: 5
+    Original LinkedHashSet: [A, B, C, D, E]
+    Removendo 'D' do LinkedHashSet: true
+    Tentando remover 'Z' que não existe no LinkedHashSet: false
+    Verificando se 'A' está contido no array: = true
+    LinkedHashSet atualizado: [A, B, C, E]
+
 ---
 
 ### Bibliografias:
 
-<li><a href="https://docs.oracle.com/javase/7/docs/api/java/util/PriorityQueue.html">ORACLE (PRIORITY QUEUE)</a></li>
-<li><a href="https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html"> ORACLE (LINKED LIST)</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/PriorityQueue.html">ORACLE (PRIORITY QUEUE)</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html"> ORACLE (LINKED LIST)</a></li>
 <li><a href="https://www.educative.io/blog/data-structures-linked-list-java-tutorial">EDUCATIVE</a></li>
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html">ORACLE (VECTOR)</a></li>
 <li><a href="https://www.devmedia.com.br/diferenca-entre-arraylist-vector-e-linkedlist-em-java/29162">DEV MEDIA</a></li>
 <li><a href="https://www.w3schools.com/java/java_arraylist.asp">W3SCHOOLS</a></li>
 <li><a href="https://www.devmedia.com.br/explorando-a-classe-arraylist-no-java/24298">DEV MEDIA</a></li>
 <li><a href="http://www.linhadecodigo.com.br/artigo/3669/trabalhando-com-a-interface-set-no-java.aspx#:~:text=Considerada%20uma%20interface%20que%20faz,nenhum%20dado%20duplicado%20na%20cole%C3%A7%C3%A3o.">LINHA DE CÓDIGO</a></li>
-<li><a href="https://docs.oracle.com/javase/7/docs/api/java/util/HashSet.html">ORACLE (HASH SET)</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html">ORACLE (HASH SET)</a></li>
 <li><a href="https://www.w3schools.com/java/java_hashset.asp">W3SCHOOLS (HASH SET)</a></li>
-<li><a href=""></a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html">ORACLE (LINKED HASH SET)</a></li>
 <li><a href=""></a></li>
 <li><a href=""></a></li>
