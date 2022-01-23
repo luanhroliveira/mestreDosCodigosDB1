@@ -258,6 +258,51 @@ Saída:
     Chefe da fila: 1
     Tamanho da fila: 4
 
+### List:
+
+- A classe List é uma interface implementada pela classe ArrayList, Vector, e LinkedList. E ela extend de Collection.
+
+  O primeiro elemento de List é zero. E ele, assim como os demais, fornece uma série de métodos para manipular os
+  elementos.
+
+````java
+public class ListClass {
+    public static void main(String[] args) {
+        List<Livro> livros = new ArrayList<Livro>();
+        List<Livro> livrosNovos = new ArrayList<Livro>();
+
+        Livro livro = new Livro();
+
+        //adiciona um livro a nossa lista
+        livros.add(livro);
+
+        //adiciona um livro a uma posição exata da lista
+        livros.add(10, livro);
+
+        // Adicionando todos os livros novos na lista de livros de uma só vez.
+        livros.addAll(livrosNovos);
+
+        // Adiciona os livros novos a lista de livros de forma dinâmica.
+        for (int i = 0; i < livrosNovos.size(); i++) {
+            livros.add(livrosNovos.get(i));
+        }
+
+        //Verifica se o livro está na lista de livros.
+        livros.contains(livro);
+
+        //Remove todos os elementos da lista
+        livros.clear();
+    }
+}
+````
+
+Como podem ver, foi instanciado duas listas com sintaxes semelhantes, porém, na sua inicialização, utilizei o
+ArrayList (que por sua vez, implementa a interface List).
+
+O intuito é gaarantir a flexibilidade da aplicação, da forma implementada, conseguimos garantir que o mesmo objeto pode
+ser instanciado de maneiras distintas em pontos distintos da aplicação, dessa forma, eu tenho certeza dos métodos que o
+objeto tem.
+
 ---
 
 ### Bibliografias:
