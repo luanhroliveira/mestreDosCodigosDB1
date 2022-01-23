@@ -441,6 +441,55 @@ Saída:
     Verificando se 'A' está contido no array: = true
     LinkedHashSet atualizado: [A, B, C, E]
 
+### SortedSet:
+
+- A interface SortedSet estende a interface Set. Esta interface contém os métodos de Set e adiciona um recurso que
+  armazena todos os elementso desta interface para serem armazenadas de forma ordenada.
+
+````java
+public class SortedSetClass {
+
+    public static void main(String[] args) {
+
+        SortedSet<String> sortedSet = new TreeSet<String>();
+
+        // Adicionando elementos
+        sortedSet.add("India");
+        sortedSet.add("Australia");
+        sortedSet.add("África do Sul");
+
+        // Adicionando elemento duplicado.
+        sortedSet.add("India");
+
+        // Exibindo.
+        System.out.println(sortedSet);
+
+        // Removendo itens usando o método remove().
+        sortedSet.remove("Australia");
+        System.out.println("Definido após a remoção da Austrália: " + sortedSet);
+
+        // Iterando sobre itens do conjunto de árvores.
+        System.out.println("Iterando sobre o conjunto:");
+
+        Iterator<String> i = sortedSet.iterator();
+
+        while (i.hasNext()) {
+            System.out.println(i.next());
+        }
+    }
+}
+````
+
+Saída:
+
+    [Australia, India, Africa do Sul]
+    Definido após a remoção da Austrália: [India, Africa do Sul]
+    Iterando sobre o conjunto:
+    India
+    Africa do Sul
+
+É importante ressaltar que todos os elementos de um SortedSet devem implementar a interface Comparable.
+
 ---
 
 ### Bibliografias:
@@ -456,5 +505,5 @@ Saída:
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html">ORACLE (HASH SET)</a></li>
 <li><a href="https://www.w3schools.com/java/java_hashset.asp">W3SCHOOLS (HASH SET)</a></li>
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashSet.html">ORACLE (LINKED HASH SET)</a></li>
-<li><a href=""></a></li>
+<li><a href="https://www.devmedia.com.br/conjuntos-classificados-sortedset-em-java-gerando-jogos-para-mega-sena/26430">DEV MEDIA (SORTED SET)</a></li>
 <li><a href=""></a></li>
