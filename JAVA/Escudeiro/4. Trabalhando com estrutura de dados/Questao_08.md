@@ -126,10 +126,10 @@ Saída:
 
   É recomendado que se uma implementação thread-safe não for necessária, utiliza-se o ArrayList no lugar do Vector.
 
-  Um Vector tem o dobro do tamanho da lista, tornando mais custoso. Por exemplo, se têm um Vector de 10 elementos, seu
+  Um Vector tem o dobro do tamanho da lista, tornando mais custoso. Por exemplo, se têm um Vector de 10 elementos, o seu
   tamanho corresponderá a 20 elementos.
 
-Veja um exemplo de sua implementação:
+Veja um exemplo da sua implementação:
 
 ````java
 public class VectorClass {
@@ -166,6 +166,52 @@ Saída:
     6
     1
 
+### ArrayList:
+
+- Um ArrayList, não muito diferente das demais listas, serve para armazenar objetos. E, com a ajuda dos seus métodos,
+  podem ser adicionados, removidos, editados, acessados, dentre outros possíveis métodos.
+
+````java
+public class ArrayListClass {
+
+    public static void main(String args[]) {
+
+        ArrayList integerArrayList = new ArrayList<Integer>();
+        integerArrayList.add(3);
+        integerArrayList.add(2);
+        integerArrayList.add(1);
+        integerArrayList.add(4);
+        integerArrayList.add(5);
+        integerArrayList.add(6);
+        integerArrayList.add(6);
+
+        Iterator iter1 = integerArrayList.iterator();
+        while (iter1.hasNext()) {
+            System.out.println(iter1.next());
+        }
+
+        System.out.println(integerArrayList.get(2));
+    }
+}
+
+
+````
+
+Saída:
+
+    3
+    2
+    1
+    4
+    5
+    6
+    6
+    1
+
+Note que o algoritmo é muito semelhante ao do Vector, pois realmente só troquei a classe. Isso porque sua utilização são
+muito parecidas, tendo como diferença o fato do Vector ser thread-safe, e o ArrayList não. Dessa forma, se precisar
+utilizar uma lista que permite thread-safe, utilize Vector.
+
 ---
 
 ### Bibliografias:
@@ -175,3 +221,5 @@ Saída:
 <li><a href="https://www.educative.io/blog/data-structures-linked-list-java-tutorial">EDUCATIVE</a></li>
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Vector.html">ORACLE (VECTOR)</a></li>
 <li><a href="https://www.devmedia.com.br/diferenca-entre-arraylist-vector-e-linkedlist-em-java/29162">DEV MEDIA</a></li>
+<li><a href="https://www.w3schools.com/java/java_arraylist.asp">W3SCHOOLS</a></li>
+<li><a href="https://www.devmedia.com.br/explorando-a-classe-arraylist-no-java/24298">DEV MEDIA</a></li>
