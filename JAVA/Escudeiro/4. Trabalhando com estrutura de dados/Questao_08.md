@@ -444,7 +444,7 @@ Saída:
 ### SortedSet:
 
 - A interface SortedSet estende a interface Set. Esta interface contém os métodos de Set e adiciona um recurso que
-  armazena todos os elementso desta interface para serem armazenadas de forma ordenada.
+  armazena todos os elementos desta interface para serem armazenadas de forma ordenada.
 
 ````java
 public class SortedSetClass {
