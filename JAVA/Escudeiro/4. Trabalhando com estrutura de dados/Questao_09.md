@@ -252,6 +252,51 @@ Saída:
     Chave : 4  valor : four
     Chave : 5  valor : five
 
+### NavigableMap
+
+- A interface NavigableMap estende de SortedMap e fornece métodos de navegação convenientes como floorKey, ceilingKey e
+  higherKey.
+
+````java
+public class NavigableMapClass {
+
+    public static void main(String[] args) {
+
+        NavigableMap<String, Integer> nm = new TreeMap<String, Integer>();
+
+        // Inserindo elementos utilizando o método put().
+        nm.put("C", 888);
+        nm.put("Y", 999);
+        nm.put("A", 444);
+        nm.put("T", 555);
+        nm.put("B", 666);
+        nm.put("A", 555);
+
+        // Exibindo elementos no console.
+        System.out.println("Mapeamentos do NavigableMap : " + nm);
+
+        System.out.printf("Descendente Set: %s%n", nm.descendingKeySet());
+        System.out.printf("Floor Entry: %s%n", nm.floorEntry("L"));
+        System.out.printf("First Entry: %s%n", nm.firstEntry());
+        System.out.printf("Last Key: %s%n", nm.lastKey());
+        System.out.printf("First Key: %s%n", nm.firstKey());
+        System.out.printf("Original Map: %s%n", nm);
+        System.out.printf("Reverse Map: %s%n", nm.descendingMap());
+    }
+}
+````
+
+Saída:
+
+    Mapeamentos do NavigableMap: {A=555, B=666, C=888, T=555, Y=999}
+    Descendente Set: [Y, T, C, B, A]
+    Floor Entry: C=888
+    First Entry: A= 555
+    Last Key: Y
+    First Key: A
+    Original Map: {A=555, B=666, C=888, T=555, Y=999}
+    Reverse Map: {Y=999, T=555, C=888, B =666, A=555}
+
 ---
 
 ### Bibliografias:
@@ -263,3 +308,4 @@ Saída:
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html">ORACLE (LINKEDHASHMAP)</a></li>
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/SortedMap.html">ORACLE (SORTEDMAP)</a></li>
 <li><a href="https://stackoverflow.com/questions/7427758/how-to-use-sortedmap-interface-in-java">STACK OVERFLOW (SORTEDMAP)</a></li>
+<li><a href="https://acervolima.com/interface-navigablemap-em-java-com-exemplo/">ACERVO LIMA (NAVIGABLEMAP)</a></li>
