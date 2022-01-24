@@ -202,6 +202,56 @@ Saída:
     Excluir elemento 'one': 1 
     Mapeamentos de LinkedHashMap: {2, 4}
 
+### SortedMap
+
+- A interface SortedMap estende de Map, e fornece uma ordenação total de seus elementos, onde os elementos podem ser
+  percorridos em ordem ordenada de chaves.
+
+  Por ser interface, não se pode criar um objeto do tipo SortedMap, a classe que implementa essa interface é a TreeMap (
+  veremos mais a frente).
+
+  É Indicado usar o TreeMap quando não for permitido chave ou valor nulo e quando for necessário que as chaves sejam
+  classificadas por ordenação natural ou por um Comparator específico.
+
+````java
+public class SortedMapClass {
+
+    public static void main(String[] args) {
+
+        SortedMap<Integer, String> sortedMap = new TreeMap<Integer, String>();
+
+        // Inserindo elementos utilizando put().
+        sortedMap.put(new Integer(2), "two");
+        sortedMap.put(new Integer(3), "three");
+        sortedMap.put(new Integer(5), "five");
+        sortedMap.put(new Integer(4), "four");
+        sortedMap.put(new Integer(1), "one");
+        Set set = sortedMap.entrySet();
+
+        // Usando iterator em SortedMap.
+        Iterator iterator = set.iterator();
+
+        // Map de travessia. Observe que a travessia produziu saída classificada (por chaves).
+        while (iterator.hasNext()) {
+            Map.Entry entry = (Map.Entry) iterator.next();
+
+            int chave = (Integer) entry.getKey();
+            String valor = (String) entry.getValue();
+
+            System.out.println("Chave " + chave + "  valor : " + valor);
+        }
+    }
+}
+````
+
+Saída:
+
+    Chave : 1  valor : one
+    Chave : 2  valor : two
+    Chave : 3  valor : three
+    Chave : 4  valor : four
+    Chave : 5  valor : five
+
 ---
 
 ### Bibliografias:
@@ -211,3 +261,5 @@ Saída:
 <li><a href="https://mauricio.github.io/2020/10/15/implementando-uma-hashtable-em-java.html">MAURICIO (HASHTABLE)</a></li>
 <li><a href="https://www.devmedia.com.br/hashmap-java-trabalhando-com-listas-key-value/29811">DEV MEDIA (HASHMAP)</a></li>
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html">ORACLE (LINKEDHASHMAP)</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/SortedMap.html">ORACLE (SORTEDMAP)</a></li>
+<li><a href="https://stackoverflow.com/questions/7427758/how-to-use-sortedmap-interface-in-java">STACK OVERFLOW (SORTEDMAP)</a></li>
