@@ -7,7 +7,7 @@
 
 ---
 
-### Map:
+### Map
 
 - A interface Map tem como característica armazenar os seus itens em pares "chave/valor". E, através da chave, é
   possível obter o seu respetivo valor. E essa chave não pode ser repetida, se caso ocorrer de ter uma chave repetida,
@@ -125,7 +125,7 @@ public class HashMapClass {
 
         //Verificando se uma chave existe no map, se existir, exibe o valor no console.
         if (map.containsKey("a")) {
-            
+
             // Mapeamento
             Integer a = map.get("a");
 
@@ -142,6 +142,66 @@ Saída:
     {c=20, a=10, b=30}
     valor para a chave "a" é: 10
 
+### LinkedHashMap
+
+- a classe LinkedHashMap implementa a interface Map e estende a classe HashMap, e herda a sua implementação. Tem o seu
+  funcionamento muito semelhante a HashMap, com um diferencial de manter uma ordem de elementos inseridos nela.
+
+  HashMap forneceu a vantagem de inserção, pesquisa e exclusão rápidas, mas nunca manteve o controle e a ordem de
+  inserção que o LinkedHashMap fornece, onde os elementos podem ser acessados na sua ordem de inserção.
+
+  Em sumo, é o mesmo que HashMap com um recurso adicional que mantém a ordem de inserção.
+
+````java
+public class LinkedHashMapClass {
+
+    public static void main(String args[]) {
+
+        LinkedHashMap<String, String> linkedHashMap = new LinkedHashMap<String, String>();
+
+        // Adicionando elementos utilizando o método put().
+        linkedHashMap.put("one", "1");
+        linkedHashMap.put("two", "2");
+        linkedHashMap.put("four", "4");
+
+        // Exibindo os elementos no console.
+        System.out.println(linkedHashMap);
+
+        // Exibindo o valor especifico de uma chave.
+        System.out.println("Obtendo valor para a chave 'one': " + linkedHashMap.get("one"));
+
+        // Exibindo o tamanho com o método size().
+        System.out.println("Tamanho do map: " + linkedHashMap.size());
+
+        // Verificando se o map é vazio ou não.
+        System.out.println("Map está vazio? " + linkedHashMap.isEmpty());
+
+        // Verificando se uma chave já existe no map.
+        System.out.println("Contém a chave 'two'? " + linkedHashMap.containsKey("two"));
+
+        // Usando o método containsValue() para verificar se um valor existe.
+        System.out.println("Contém o valor 'one'? " + linkedHashMap.containsValue("1"));
+
+        // Usando o método remove() para remover um elemento.
+        System.out.println("Excluir elemento 'one': " + linkedHashMap.remove("one"));
+
+        // Exibindo no console todos os elementos de map.
+        System.out.println("Mapeamento de LinkedHashMap: " + linkedHashMap);
+    }
+}
+````
+
+Saída:
+
+    {one=1, two=2, four=4} 
+    Obtendo valor para a chave 'one': 1 
+    Tamanho do map: 3 
+    Map está vazio? false 
+    Contém a chave 'two'? true 
+    Contém o valor 'one'? true 
+    Excluir elemento 'one': 1 
+    Mapeamentos de LinkedHashMap: {2, 4}
+
 ---
 
 ### Bibliografias:
@@ -150,3 +210,4 @@ Saída:
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html">ORACLE (HASHTABLE)</a></li>
 <li><a href="https://mauricio.github.io/2020/10/15/implementando-uma-hashtable-em-java.html">MAURICIO (HASHTABLE)</a></li>
 <li><a href="https://www.devmedia.com.br/hashmap-java-trabalhando-com-listas-key-value/29811">DEV MEDIA (HASHMAP)</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html">ORACLE (LINKEDHASHMAP)</a></li>
