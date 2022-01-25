@@ -297,6 +297,44 @@ Saída:
     Original Map: {A=555, B=666, C=888, T=555, Y=999}
     Reverse Map: {Y=999, T=555, C=888, B =666, A=555}
 
+### TreeMap
+
+- A classe TreeMap implementa As interfaces Map, SortedMap e NavigableMap.
+
+  A implementação de um TreeMap não é sincronizada no sentido de que se um Map for acessado por várias threads,
+  concorrentemente e pelo menos uma das threads modificar o Map estruturalmente, ele deve ser sincronizado externamente.
+
+  A ordem de armazenamento mantida pelo TreeMap deve ser consistente com equals como qualquer outro Map,
+  independentemente dos comparadores explícitos.
+
+  TreeMap não aceita chaves nulas, e se houver, lança uma NullPointerException, mas permite um ou mais valores nulos.
+
+  Veja a sua implementação:
+
+````java
+public class TreeMapClass {
+
+    public static void main(String[] args) {
+
+        TreeMap<Integer, String> treeMap = new TreeMap<Integer, String>();
+
+        // Inserindo elementos chave e valor com o método put().
+        treeMap.put(10, "Dez");
+        treeMap.put(15, "Quinze");
+        treeMap.put(20, "Vinte");
+        treeMap.put(25, "Vinte e cinco");
+        treeMap.put(30, "Trinta");
+
+        // Exibinto conteúdo de TreeMap no console.
+        System.out.println("TreeMap: " + treeMap);
+    }
+}
+````
+
+Saída:
+
+    TreeMap: {10=Dez, 15=Quinze, 20=Vinte, 25=Vinte e cinco, 30=trinta}
+
 ---
 
 ### Bibliografias:
@@ -309,3 +347,5 @@ Saída:
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/SortedMap.html">ORACLE (SORTEDMAP)</a></li>
 <li><a href="https://stackoverflow.com/questions/7427758/how-to-use-sortedmap-interface-in-java">STACK OVERFLOW (SORTEDMAP)</a></li>
 <li><a href="https://acervolima.com/interface-navigablemap-em-java-com-exemplo/">ACERVO LIMA (NAVIGABLEMAP)</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html">ORACLE (TREEMAP)</a></li>
+<li><a href="https://acervolima.com/como-criar-objetos-treemap-usando-interface-comparavel-em-java/">ACERVO LIMA (TREEMAP)</a></li>
