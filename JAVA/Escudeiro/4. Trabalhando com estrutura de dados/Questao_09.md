@@ -15,7 +15,7 @@
 
   Por essa característica de chave/valor, ela se torna ideal para cenários do tipo dicionário.
 
-  Como por exemplo, um mapa de turmas e alunos, onde cada turma (chave) está associada a uma lista de alunos (valor).
+  Como, por exemplo, um mapa de turmas e alunos, onde cada turma (chave) está associada a uma lista de alunos (valor).
 
   Por ser uma interface, não é possível criar objetos do tipo map. Portanto, devemos utilizar uma classe que estenda
   esse Map.
