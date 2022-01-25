@@ -59,8 +59,8 @@ Saída:
   objeto que não seja nulo como chave ou valor. E para se obter os objetos com sucesso, é necessário que os objetos
   mapeados como chave devem implementar o método hashCode e equals.
 
-  Em Hashtable, especificamos um objeto que é usado como chave e o valor que queremos associar a essa chave. A chaveé
-  então criptografada e o código de hash resultante é usado como o índice no qual o valor é armazenado na tabela.
+  Em Hashtable, especificamos um objeto que é usado como chave e o valor que queremos associar a essa chave. A chave é
+  então criptografada e o código de hash resultante é usado como o índice onde o valor é armazenado na tabela.
 
   Veja um algoritmo de implementação do Hashtable:
 
