@@ -2,7 +2,7 @@
 
 ---
 
-### Criação de métodos com argumentos e valores de retorno;
+### Criação de métodos com argumentos e valores de retorno:
 
 - Os métodos são as funcionalidades da classe. Para cada método, deve-se especificar uma assinatura com a segunte
   sintaxe:
@@ -19,7 +19,7 @@
     }
 ````
 
-### Criação de métodos sem argumentos e valores de retorno;
+### Criação de métodos sem argumentos e valores de retorno:
 
 - Para criar um método sem argumento e sem valor de retorno é muito simples, basta codificar seguindo as especificações
   e utilizar o tipo de retorno como 'void':
@@ -30,7 +30,7 @@
     }
 ````
 
-### A aplicação da palavra-chave static em métodos e atributos, ressaltando a principal característica de um método static e um atributo static;
+### A aplicação da palavra-chave static em métodos e atributos, ressaltando a principal característica de um método static e um atributo static:
 
 - O static é o modificador que torna os métodos ou atributos globais, ou seja, podem ser acessados sem a necessidade de
   um objeto da classe.
@@ -69,7 +69,7 @@ public class RestauranteConfig {
 
 Conforme os princípios de encapsulamento, devem ser criados métodos para manipular esses atributos de classe static.
 
-### A sobrecarga de métodos;
+### A sobrecarga de métodos:
 
 - Esse mecanismo do polimorfismo, consiste em definir, para uma mesma classe, vários métodos ou construtores de mesmo
   nome, mas com parâmetros diferentes.
@@ -114,11 +114,11 @@ public class Conta {
 
 Conforme o elemento que estiver a ser definido, teremos overloading de métodos ou de parâmetros.
 
-### A criação de construtores padrão, construtores com argumentos e a sobrecarga de construtores;
+### A criação de construtores padrão, construtores com argumentos e a sobrecarga de construtores:
 
 - Vide tópico acima.
 
-### A aplicação de encapsulamento utilizando os modificadores de acesso.
+### A aplicação de encapsulamento utilizando os modificadores de acesso:
 
 - O encapsulamento serve para separar os dados do comportamento da aplicação, de modo a controlar como cada parte será
   usada pelo restante da aplicação.
